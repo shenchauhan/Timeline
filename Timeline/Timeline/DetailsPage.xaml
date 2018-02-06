@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="Timeline.DetailsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Timeline"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:animations="using:Microsoft.Toolkit.Uwp.UI.Animations"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Image x:Name="GalleryItemImage" Source="{x:Bind GalleryItem.ImageSource, Mode=OneWay}" Stretch="UniformToFill" animations:Connected.Key="listItem" />
+        <StackPanel VerticalAlignment="Bottom" Margin="10">
+            <TextBlock Text="{x:Bind GalleryItem.Name}" Foreground="White" FontSize="32" FontWeight="SemiBold" animations:Connected.AnchorElement="{x:Bind GalleryItemImage}" />
+            <TextBlock Text="{x:Bind GalleryItem.Photographer}" Foreground="White" FontSize="24" FontWeight="Light" animations:Connected.AnchorElement="{x:Bind GalleryItemImage}" />
+        </StackPanel>
+        <SymbolIcon Symbol="Pictures" PointerPressed="SymbolIcon_PointerPressed" HorizontalAlignment="Right" Margin="40" Foreground="White" VerticalAlignment="Bottom">
+            <SymbolIcon.RenderTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2" />
+            </SymbolIcon.RenderTransform>
+        </SymbolIcon>
+    </Grid>
+</Page>
