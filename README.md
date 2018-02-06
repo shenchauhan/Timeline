@@ -1,7 +1,7 @@
 # Timeline
 
 Before I get started, here is the source code that is mentioned in this blog:
-[http://www.github.com/shenchauhan/Timeline](http://www.github.com/shenchauhan/Timeline, "Source")
+[http://www.github.com/shenchauhan/Timeline](http://www.github.com/shenchauhan/Timeline "Source")
 
 ## What is Timeline?
 
